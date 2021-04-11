@@ -1,0 +1,24 @@
+Index: src/RegexPlaying.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/RegexPlaying.kt	(date 1587416209093)
++++ src/RegexPlaying.kt	(date 1587416209093)
+@@ -1,6 +1,10 @@
+ fun main() {
+-    for (i in 0 until 20){
+-        val regex = "^[A-Za-z /s]*$".toRegex()
+-        println(readLine()?.let { regex.matches(it) })
++    for (i in 1 until 30) {
++        val word = readLine() ?: ""
++        println(word.onlyContainsLetters()
++        )
+     }
+-}
+\ No newline at end of file
++}
++fun String.onlyContainsLetters(): Boolean {
++    val regex = "^[A-Za-z]*$".toRegex()
++    return regex.matches(this)}
+\ No newline at end of file
